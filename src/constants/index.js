@@ -1,6 +1,7 @@
 export const filters = [
   {
-    name: "order",
+    name: "filter",
+    defaultValue: "NEW",
     options: [
       {
         value: "NEW",
@@ -22,6 +23,7 @@ export const filters = [
   },
   {
     name: "column",
+    defaultValue: 2,
     options: [
       {
         value: 2,
