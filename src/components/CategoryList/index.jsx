@@ -1,14 +1,22 @@
 import { useCallback, useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
+import { useQuery } from "react-query";
+
+import { api } from "@api/Category";
 
 import Text from "@components/Text";
+import SkeletonCategory from "@components/SkeletonCategory";
 import CategoryItem from "./CategoryItem";
 
-const CategoryList = ({ resource, filter }) => {
-  const category = resource.category.read();
+const CategoryList = () => {
+  const { isLoading, error, data } = useQuery("category", () =>
+    api.get("/categories.php").then(({ data }) => data.categories)
+  );
 
   const [searchParams, setSearchParams] = useSearchParams();
-  const [active, setActive] = useState(filter);
+  const [active, setActive] = useState(
+    searchParams.get("category")?.split(",") || []
+  );
 
   const handleChange = useCallback((name) => {
     setActive((state) =>
@@ -35,8 +43,8 @@ const CategoryList = ({ resource, filter }) => {
         </button>
       </div>
       <ul className="flex flex-wrap gap-2">
-        {category &&
-          category.map(({ idCategory, strCategory }) => (
+        {data &&
+          data.map(({ idCategory, strCategory }) => (
             <CategoryItem
               key={idCategory}
               category={strCategory}
@@ -44,6 +52,8 @@ const CategoryList = ({ resource, filter }) => {
               onChange={handleChange}
             />
           ))}
+        {isLoading && <SkeletonCategory />}
+        {error && <div> 에러: {error.message} </div>}
       </ul>
     </div>
   );
