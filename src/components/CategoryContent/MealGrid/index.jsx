@@ -12,7 +12,7 @@ const MealGrid = ({ data, column }) => {
       <div className={`grid gap-5 mb-5 ${gridVariant[column]}`}>
         {data &&
           data?.pages.map(({ idMeal, strMeal, strMealThumb }) => (
-            <MealCell key={idMeal} name={strMeal} imageUrl={strMealThumb} />
+            <MealCell key={idMeal} altText={strMeal} imageUrl={strMealThumb} />
           ))}
       </div>
     </>
