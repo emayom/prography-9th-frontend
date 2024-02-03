@@ -2,7 +2,7 @@ import { useCallback, useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { useQuery } from "react-query";
 
-import { api } from "@api/Category";
+import { axiosInstance } from "@api/Category";
 
 import Text from "@components/Text";
 import SkeletonCategory from "@components/SkeletonCategory";
@@ -10,7 +10,7 @@ import CategoryItem from "./CategoryItem";
 
 const CategoryList = () => {
   const { isLoading, error, data } = useQuery("category", () =>
-    api.get("/categories.php").then(({ data }) => data.categories)
+    axiosInstance.get("/categories.php").then(({ data }) => data.categories)
   );
 
   const [searchParams, setSearchParams] = useSearchParams();
