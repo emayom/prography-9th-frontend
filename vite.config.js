@@ -9,6 +9,10 @@ export default defineConfig({
     alias: [
       { find: "@", replacement: resolve(__dirname, "src") },
       {
+        find: "@api",
+        replacement: resolve(__dirname, "src/api"),
+      },
+      {
         find: "@utils",
         replacement: resolve(__dirname, "src/utils"),
       },
