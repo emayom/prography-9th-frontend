@@ -5,11 +5,13 @@ import CategoryContent from "@components/CategoryContent";
 const Main = () => {
   return (
     <>
-      <Header />
-      <main className="container min-w-[375px] mx-auto px-8 py-2">
-        <CategoryList />
-        <CategoryContent />
-      </main>
+      <div className="container min-w-[375px] max-w-[750px] mx-auto">
+        <Header />
+        <main className="w-full px-8 py-2">
+          <CategoryList />
+          <CategoryContent />
+        </main>
+      </div>
     </>
   );
 };
