@@ -9,7 +9,7 @@ const MealCell = memo(function MealCell({ name, imageUrl }) {
         <img
           src={imageUrl}
           alt={name}
-          className="absolute transition ease-in-out delay-150 overflow-hidden group-hover:scale-110"
+          className="absolute transition ease-in-out delay-150 overflow-hidden group-hover:scale-110 will-change-transform"
         />
       </div>
       <Text
