@@ -2,7 +2,7 @@ import { useCallback, useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { useQuery } from "react-query";
 
-import { axiosInstance } from "@api/Category";
+import { axiosInstance } from "@api/category";
 
 import Text from "@components/Text";
 import SkeletonCategory from "@components/SkeletonCategory";
