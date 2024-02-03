@@ -31,4 +31,5 @@ npm run preview -- --base /
 - [x] 이 외에 ux적으로 필요한 기능이 있으면 자유롭게 추가해주세요
 
 #### 미리보기 
-![Preview](https://github.com/emayom/prography-9th-frontend/assets/85545101/7279d1e4-6820-4534-b946-cb76068e0414)
+https://github.com/emayom/prography-9th-frontend/assets/85545101/d60ed7e5-0707-480f-aa33-5bd056be4b01
+
