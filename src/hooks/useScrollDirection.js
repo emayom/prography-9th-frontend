@@ -11,7 +11,7 @@ const useScrollDirection = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [handleScroll]);
 
   const handleScroll = useMemo(
     () =>
