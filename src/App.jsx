@@ -8,7 +8,10 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<Main />}></Route>
-        <Route path="*" element={<Navigate replace to="/" />} />
+        <Route
+          path="*"
+          element={<Navigate replace to={import.meta.env.BASE_URL} />}
+        />
       </Routes>
     </>
   );
