@@ -27,9 +27,12 @@ const CategoryList = () => {
   }, []);
 
   useEffect(() => {
-    active.length
-      ? searchParams.set("category", active)
-      : searchParams.delete("category");
+    if (active.length) {
+      searchParams.set("category", active);
+    } else {
+      searchParams.delete("filter");
+      searchParams.delete("category");
+    }
 
     setSearchParams(searchParams, { replace: true });
   }, [active, searchParams, setSearchParams]);
