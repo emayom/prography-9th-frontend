@@ -4,15 +4,6 @@ import { throttle } from "lodash";
 const useScrollDirection = () => {
   const [direction, setDirection] = useState("Down");
   const prevScrollY = useRef(0);
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [handleScroll]);
-
   const handleScroll = useMemo(
     () =>
       throttle(() => {
@@ -22,6 +13,14 @@ const useScrollDirection = () => {
       }, 250),
     [prevScrollY]
   );
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [handleScroll]);
 
   return direction;
 };
