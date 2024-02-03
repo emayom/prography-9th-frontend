@@ -11,7 +11,7 @@ const SkeletonCategory = () => {
           <div
             key={idx}
             className={cn(
-              "relative flex min-h-9 py-2 px-4 rounded-md shadow-sm border bg-stone-100",
+              "animate-pulse relative flex min-h-9 py-2 px-4 rounded-md shadow-sm border bg-stone-100",
               width[Math.floor(Math.random() * width.length)]
             )}
           />
