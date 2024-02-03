@@ -1,18 +1,18 @@
 export const filters = [
   {
     name: "filter",
-    defaultValue: "NEW",
+    defaultValue: "new",
     options: [
       {
-        value: "NEW",
+        value: "new",
         name: "최신 등록순",
       },
       {
-        value: "ASC",
+        value: "asc",
         name: "이름 오름차순",
       },
       {
-        value: "DESC",
+        value: "desc",
         name: "이름 내림차순",
       },
     ],
