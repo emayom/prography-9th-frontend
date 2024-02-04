@@ -1,3 +1,7 @@
+<p align="left">
+    <img width="275px" src="https://github.com/emayom/prography-9th-frontend/assets/85545101/bc65845f-eec4-4930-afda-8fe5a82e3078">
+</p>
+
 # 프로그라피 9기 React 사전과제
 - 사전과제 기간: 2024.01.30 - 2024.02.04
 
