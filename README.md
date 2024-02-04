@@ -13,6 +13,8 @@
 
 ## 실행 방법
 ```shell
+git clone https://github.com/emayom/prography-9th-frontend.git
+
 npm run build -- --base /  
 npm run preview -- --base /
 ```
